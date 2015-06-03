@@ -1,6 +1,12 @@
 <h1>New Post</h1>
-<%= form_for @post do |f| %>
-  <%= f.label :content %>
-  <%= f.text_field :content %>
-  <%= f.submit %>
-<% end %>
+
+
+  <%= form_for @post, html: {id: :form } do |f| %>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+    <div id='post_create'>
+      <%= f.submit %>
+    </div>
+  <% end %>

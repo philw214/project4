@@ -1,9 +1,6 @@
-
-
-
-
-
 <%= form_for @post do |f| %>
+  <%= f.label :location %>
+  <%= f.text_field :location %>
   <%= f.label :content %>
   <%= f.text_field :content %>
   <%= f.submit %>

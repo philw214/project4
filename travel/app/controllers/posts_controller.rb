@@ -1,11 +1,9 @@
 class PostsController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
     if current_user
       @posts = current_user.posts
-    else
-      @posts = Post.all
     end
   end
 
@@ -45,7 +43,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    return params[:post].permit(:content)
+    return params[:post].permit(:content, :location)
   end
 
 end

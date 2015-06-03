@@ -5,11 +5,3 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Post.create([
-  {content:'post 1'},
-  {content:'post 2'},
-  {content:'post 3'},
-  {content:'post 4'},
-  {content:'post 5'},
-  {content:'post 6'}
-  ])

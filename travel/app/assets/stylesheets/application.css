@@ -13,3 +13,36 @@
  *= require_tree .
  *= require_self
  */
+
+.post{
+  margin-top: 35%;
+}
+.app_name{
+  margin-top: 10%;
+}
+.title{
+  margin: auto;
+  width: 20%;
+  text-align: center;
+  border: 2px solid;
+  border-width: 20%;
+  padding:1%;
+}
+.user{
+  margin-top: 10%;
+}
+.login{
+  margin: 0 auto;
+  width: 20%;
+  text-align: center;
+
+}
+.atlas{
+  margin: 0 auto;
+  width: 65.5%;
+}
+#map{
+  position: absolute;
+  height:57%;
+  width:65.5%;
+}
