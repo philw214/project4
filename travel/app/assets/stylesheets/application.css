@@ -13,7 +13,9 @@
  *= require_tree .
  *= require_self
  */
-
+body{
+  background-color: #303030;
+}
 .post{
   margin-top: 35%;
 }
@@ -43,6 +45,6 @@
 }
 #map{
   position: absolute;
-  height:57%;
+  height:58%;
   width:65.5%;
 }

@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   def index
     if current_user
-      @posts = current_user.posts
+      @posts = current_user.posts.order('created_at DESC')
     end
   end
 

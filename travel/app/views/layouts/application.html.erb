@@ -2,16 +2,14 @@
 <html>
   <head>
     <title>Travel Blog</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'jquery' 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
+
     <%= csrf_meta_tags %>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
-    <style>
-      /*body { margin:0; padding:0; }*/
-    </style>
   </head>
   <body>
     <ul>
@@ -20,20 +18,5 @@
 
     <%= yield %>
     <%= link_to "signout", destroy_user_session_path, :method => :delete %>
-    <script>
-    $("#search").click(function(){
-     var latitude = $("#latitude").val();
-     var longitude = $("#longitude").val();
-     var zoom = $("#zoom").val();
-
-     var marker = L.marker([latitude, longitude], zoom).addTo(map);
-     var markerHtml = 'test marker';
-     marker.bindPopup(markerHtml);
-    });
-
-      L.mapbox.accessToken = 'pk.eyJ1IjoicHcyMTQiLCJhIjoiOGNjNzY4ZDZmMGMyNzVkZDU5OTg1ZmVkMzFmZWMwZTQifQ.ABzSby3NgC5b0WnTg-ONMw';
-      var map = L.mapbox.map('map', 'pw214.f8720651')
-        .setView([37, -77], 5)
-    </script>
   </body>
 </html>
