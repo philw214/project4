@@ -1,24 +1,22 @@
-
+<body>
 <div class='atlas'>
   <div id='map'></div>
 </div>
-
 <div class='post'>
   <h1>All Posts </h1>
-  <a href="<%=new_post_path(@post)%>">New Post</a>
+  <%=link_to 'New Post', new_post_path%>
   <%@posts.each do |post|%>
-    <p><%=post.location%></p>
-    <p><%= link_to(post.content, post_path(post))%></p>
+    <p><%= link_to(post.location.upcase, post_path(post))%></br><%=time_ago_in_words(post.created_at)%></p>
   <%end%>
 </div>
 
-<!-- <input type="text" id="latitude" />
-<input type="text" id="longitude" />
-<input type="text" id="zoom" />
-<button type="button" id="search">Click me!</button> -->
+<div class='write'>
+  <textarea id='journal' type="text" class="mirror"></textarea>
+  <textarea id='user_text' class="mirror"></textarea>
+</div>
 
 <script>
   data = <%=raw (@posts.to_json)%>
 </script>
-
+</body>
 <%= javascript_include_tag 'posts_map' %>

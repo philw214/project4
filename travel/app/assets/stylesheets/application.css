@@ -10,41 +10,57 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
  */
 body{
-  background-color: #303030;
+  background-color: #000000;
+  color: white;
+}
+a{
+  text-decoration:none;
+  color: #68A0A6;
 }
 .post{
-  margin-top: 35%;
-}
-.app_name{
-  margin-top: 10%;
-}
-.title{
-  margin: auto;
-  width: 20%;
   text-align: center;
-  border: 2px solid;
-  border-width: 20%;
-  padding:1%;
+  margin-bottom: 5%;
+  margin-left: 5px;
+  width: 11%;
+  height: 35%;
+  overflow: scroll;
+  border: 1px solid;
+  position: absolute;
 }
-.user{
-  margin-top: 10%;
-}
-.login{
-  margin: 0 auto;
-  width: 20%;
-  text-align: center;
 
+.write{
+  /*border: 1px solid white;*/
+  width: 26%;
+  margin: 0 auto;
+  margin-top: 36%;
+}
+#user_text{
+  font-size: 15px;
+  border-radius: 5px;
+  margin-left: 26%;
+  height: 100px;
+  width: 200px;
+}
+#journal{
+  font-family: 'Homemade Apple', cursive;
+  font-size: 21px;
+  background-image: url('http://bradybarr.com/wp-content/uploads/2013/07/old-paper-parchment-plain.jpg');
+  background-size: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  height: 170px;
+  width: 400px;
 }
 .atlas{
   margin: 0 auto;
-  width: 65.5%;
+  width: 70%;
 }
 #map{
+  border-radius: 20px;
   position: absolute;
   height:58%;
-  width:65.5%;
+  width:70%;
 }

@@ -1,0 +1,48 @@
+body{
+  background-color: #000;
+  color: white;
+}
+h2{
+  font-family: 'Iceland', cursive;
+  font-size: 29px;
+  margin: 0 auto;
+  width: 20%;
+  text-align: center;
+
+}
+a{
+  text-decoration:none;
+  color: #68A0A6;
+}
+.app_name{
+  margin-top: 10%;
+}
+#user_email, #user_password{
+  height: 50px;
+  width: 289px;
+  border-radius: 20px;
+  background-color: rgba(48, 48, 48, 0.5);
+  color: white;
+  font-size: 17px;
+
+}
+.title{
+  font-family: 'Iceland', cursive;
+  font-size: 90px;
+  letter-spacing: 0.2em;
+  margin: auto;
+  width: 28%;
+  text-align: center;
+  /*border: 2px solid;*/
+  border-width: 20%;
+  padding:1%;
+}
+.user{
+  margin-top: 10%;
+}
+.login{
+  margin: 0 auto;
+  width: 20%;
+  text-align: center;
+
+}

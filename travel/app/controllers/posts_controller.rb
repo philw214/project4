@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
-
+  
   def index
     if current_user
       @posts = current_user.posts.order('created_at DESC')
@@ -14,8 +14,6 @@ class PostsController < ApplicationController
   def create
     if current_user
       @post = current_user.posts.new(post_params)
-    else
-      @post = Post.new
     end
     @post.save
     redirect_to('/posts')
