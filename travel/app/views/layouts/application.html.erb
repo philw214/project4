@@ -7,13 +7,13 @@
     <%= csrf_meta_tags %>
     <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
-    <link href='http://fonts.googleapis.com/css?family=Homemade+Apple' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Iceland' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Homemade+Apple' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Iceland' rel='stylesheet' type='text/css'>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   </head>
   <body>
-    <a href='/posts'>HOME</a>
+    <a class='home' href='/posts'>HOME</a>
     <%= yield %>
-    <%= link_to "signout", destroy_user_session_path, :method => :delete %>
+    <!-- <%= link_to "signout", destroy_user_session_path, :method => :delete %> -->
   </body>
 </html>

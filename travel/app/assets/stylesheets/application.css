@@ -13,31 +13,62 @@
  *= require_self
  */
 body{
-  background-color: #000000;
+  background-image: url('/assets/journal.png');
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: top;
+  /*background-size: 60%;*/
+  background-size: 80%;
   color: white;
 }
+#post_content{
+  height: 150px;
+}
+
+#post-form{
+  position: absolute;
+  left: 50%;
+  bottom: 30%;
+}
+
 a{
   text-decoration:none;
   color: #68A0A6;
 }
+.home{
+  float: left;
+}
+.signout{
+  margin-top: 15%;
+
+}
+.new_post{
+position: relative;
+/*border: 1px solid white;*/
+width: 5%;
+top: 70px;
+
+}
 .post{
   text-align: center;
-  margin-bottom: 5%;
+  margin-top: 3%;
   margin-left: 5px;
   width: 11%;
   height: 35%;
-  overflow: scroll;
-  border: 1px solid;
+  border: 1px solid white;
+  border-radius: 4px;
   position: absolute;
 }
 
 .write{
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
   /*border: 1px solid white;*/
-  width: 26%;
-  margin: 0 auto;
-  margin-top: 36%;
+  width: 18%;
+
 }
-#user_text{
+/*#user_text{
   font-size: 15px;
   border-radius: 5px;
   margin-left: 26%;
@@ -53,14 +84,17 @@ a{
   margin-bottom: 10px;
   height: 170px;
   width: 400px;
-}
+}*/
 .atlas{
+  /*border: 1px solid white;
   margin: 0 auto;
-  width: 70%;
+  width: 50%;*/
 }
 #map{
-  border-radius: 20px;
+  border-radius: 30px;
+  margin-top: 2%;
   position: absolute;
-  height:58%;
-  width:70%;
+  left: 52%;
+  height:49%;
+  width:32%;
 }

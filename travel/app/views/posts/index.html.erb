@@ -2,21 +2,27 @@
 <div class='atlas'>
   <div id='map'></div>
 </div>
-<div class='post'>
+<!-- <div class='post'>
   <h1>All Posts </h1>
-  <%=link_to 'New Post', new_post_path%>
   <%@posts.each do |post|%>
-    <p><%= link_to(post.location.upcase, post_path(post))%></br><%=time_ago_in_words(post.created_at)%></p>
+    <p><%= link_to(post.location.upcase, post_path(post))%></br><%=time_ago_in_words(post.created_at) + ' ago'%></p>
   <%end%>
-</div>
+</div> -->
 
-<div class='write'>
-  <textarea id='journal' type="text" class="mirror"></textarea>
-  <textarea id='user_text' class="mirror"></textarea>
-</div>
+<div class='new_post'><%=link_to 'New Post', new_post_path, remote: true%></div>
+
+ <div class='write'>
+  <!-- <textarea type="text" class="mirror"></textarea> -->
+ <textarea id='user_text' class="mirror"></textarea>
+ </div>
+ <div id="post-form" style="display:none;"></div>
+<!-- <div class='signout'>
+   <%= link_to "signout", destroy_user_session_path, :method => :delete %>
+</div> -->
 
 <script>
   data = <%=raw (@posts.to_json)%>
 </script>
 </body>
+
 <%= javascript_include_tag 'posts_map' %>

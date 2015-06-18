@@ -10,9 +10,10 @@ h2{
   text-align: center;
 
 }
-a{
+.home{
   text-decoration:none;
   color: #68A0A6;
+  margin-bottom: 3%;
 }
 .app_name{
   margin-top: 10%;

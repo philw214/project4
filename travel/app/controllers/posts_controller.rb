@@ -1,9 +1,13 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
     if current_user
       @posts = current_user.posts.order('created_at DESC')
+      respond_to do |format|
+        format.html
+        format.json
+      end
     end
   end
 
