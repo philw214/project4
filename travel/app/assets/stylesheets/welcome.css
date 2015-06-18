@@ -11,9 +11,11 @@ h2{
 
 }
 .home{
+  position: absolute;
+  top: 5%;
   text-decoration:none;
   color: #68A0A6;
-  margin-bottom: 3%;
+
 }
 .app_name{
   margin-top: 10%;
@@ -25,6 +27,7 @@ h2{
   background-color: rgba(48, 48, 48, 0.5);
   color: white;
   font-size: 17px;
+  outline: none;
 
 }
 .title{

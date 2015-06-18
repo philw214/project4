@@ -1,7 +1,5 @@
 <%= form_for @post do |f| %>
-  <%= f.label :location %>
-  <%= f.text_field :location %>
-  <%= f.label :content %>
-  <%= f.text_area :content, :class => 'mirror'%>
+  <%= f.text_field :location, :class => 'mirror1' %>
+  <%= f.text_area :content, :class => 'mirror2'%>
   <%= f.submit %>
 <% end %>

@@ -1,28 +1,30 @@
 <body>
-<div class='atlas'>
+
   <div id='map'></div>
-</div>
-<!-- <div class='post'>
-  <h1>All Posts </h1>
-  <%@posts.each do |post|%>
-    <p><%= link_to(post.location.upcase, post_path(post))%></br><%=time_ago_in_words(post.created_at) + ' ago'%></p>
-  <%end%>
-</div> -->
+  <div class='allposts'>
+    <h1>All Posts </h1>
+    </br>
+    <%@posts.each do |post|%>
+      <%= link_to(post.location.capitalize, post_path(post), :class => 'location')%>
+      <p class='content'><%= post.content.truncate_words(4) %></p>
+      <p><%=  'Created ' + time_ago_in_words(post.created_at) + ' ago' %></p>
+    <%end%>
+  </div>
 
-<div class='new_post'><%=link_to 'New Post', new_post_path, remote: true%></div>
+  <%=link_to 'New Post', new_post_path, :class => 'new_post', remote: true%>
 
- <div class='write'>
-  <!-- <textarea type="text" class="mirror"></textarea> -->
- <textarea id='user_text' class="mirror"></textarea>
- </div>
- <div id="post-form" style="display:none;"></div>
-<!-- <div class='signout'>
-   <%= link_to "signout", destroy_user_session_path, :method => :delete %>
-</div> -->
+  <div class='write'>
+    <textarea id='user_location' class="mirror1" placeholder="Prague, Brazil, Hong Kong..." style="display:none;"></textarea>
+   <textarea id='user_content' class="mirror2" placeholder="Tell a story..." style="display:none;"></textarea>
+  </div>
+  <div id="post-form" style="display:none;"></div>
 
-<script>
-  data = <%=raw (@posts.to_json)%>
-</script>
+  <%= link_to "signout", destroy_user_session_path, :method => :delete, :class => 'signout' %>
+
+  <script>
+    data = <%=raw (@posts.to_json)%>
+  </script>
+
 </body>
 
 <%= javascript_include_tag 'posts_map' %>
