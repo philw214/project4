@@ -1,5 +1,9 @@
 body{
-  background-color: #000;
+  background-image: url('/assets/journal.png');
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 80%;
   color: white;
 }
 h2{
