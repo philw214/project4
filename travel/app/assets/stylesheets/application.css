@@ -13,7 +13,7 @@
  *= require_self
  */
 body{
-  background-image: url('/assets/journal.png');
+  background-image: url('/images/journal.png');
   background-color: black;
   background-repeat: no-repeat;
   background-position: top;
@@ -25,7 +25,7 @@ body{
   color: #68A0A6;
 }
 #post_content{
-  background-image: url('/assets/content_bckgrnd.png');
+  background-image: url('/images/content_bckgrnd.png');
   background-size: cover;
   font-family: 'Homemade Apple', cursive;
   font-size: 19px;
@@ -35,7 +35,7 @@ body{
   outline: none;
 }
 #post_location{
-  background-image: url('/assets/location_bckgrnd.png');
+  background-image: url('/images/location_bckgrnd.png');
   background-size: contain;
   font-family: 'Homemade Apple', cursive;
   font-size: 18px;
