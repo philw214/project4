@@ -5,7 +5,7 @@
     <h1>All Posts </h1>
     </br>
     <%@posts.each do |post|%>
-      <%= link_to(post.location.capitalize, post_path(post), :class => 'location')%>
+      <%= link_to(post.location.gsub(/[A-Za-z']+/,&:capitalize), post_path(post), :class => 'location')%>
       <p class='content'><%= post.content.truncate_words(4) %></p>
       <p><%=  'Created ' + time_ago_in_words(post.created_at) + ' ago' %></p>
     <%end%>
