@@ -15,12 +15,10 @@
 
   <div class='write'>
     <textarea id='user_location' class="mirror1" placeholder="Prague, Brazil, Hong Kong..." style="display:none;"></textarea>
-   <textarea id='user_content' class="mirror2" placeholder="Tell a story..." style="display:none;"></textarea>
+    <textarea id='user_content' class="mirror2" placeholder="Tell a story..." style="display:none;"></textarea>
   </div>
   <div id="post-form" style="display:none;"></div>
-
-  <%= link_to "signout", destroy_user_session_path, :method => :delete, :class => 'signout' %>
-
+    <%= link_to "signout", destroy_user_session_path, :method => :delete, :class => 'signout' %>
   <script>
     data = <%=raw (@posts.to_json)%>
   </script>

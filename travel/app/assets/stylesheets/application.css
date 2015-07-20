@@ -12,20 +12,26 @@
  *
  *= require_self
  */
-body{
-  background-image: url('/images/journal.png');
+ @media screen and (max-width: 1539px){
+   /*body{
+     background-clip: border-box;
+   }*/
+ }
+html{
+  background-image: url('/images/journal.jpg');
   background-color: black;
   background-repeat: no-repeat;
   background-position: top;
-  background-size: 80%;
+  background-size: 82%;
   color: white;
 }
+
 .home{
   float: left;
   color: #68A0A6;
 }
 #post_content{
-  background-image: url('/images/content_bckgrnd.png');
+  background-image: url('/images/content_bckgrnd.jpg');
   background-size: cover;
   font-family: 'Homemade Apple', cursive;
   font-size: 19px;
@@ -35,7 +41,7 @@ body{
   outline: none;
 }
 #post_location{
-  background-image: url('/images/location_bckgrnd.png');
+  background-image: url('/images/location_bckgrnd.jpg');
   background-size: contain;
   font-family: 'Homemade Apple', cursive;
   font-size: 18px;

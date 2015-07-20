@@ -1,11 +1,4 @@
-body{
-  background-image: url('/images/journal.png');
-  background-color: black;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: 80%;
-  color: white;
-}
+
 h2{
   font-family: 'Iceland', cursive;
   font-size: 29px;
