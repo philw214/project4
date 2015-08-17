@@ -1,8 +1,7 @@
-<h1>Post Details</h1>
-
-
-<%=link_to 'Edit Post', edit_post_path%>
-<p><%=@post.location%></p>
-<p><%=@post.content%></p>
-
-<%= button_to "Delete", @post, method: :delete, data: {confirm: "Are you sure?"} %>
+<h1 class="show-heading">Post Details</h1>
+<div class="show-content">
+  <%=link_to 'Edit Post', edit_post_path%>
+  <p><%="LOCATION: " + @post.location%></p>
+  <p><%="CONTENT: " + @post.content%></p>
+  <%= button_to "Delete", @post, method: :delete, data: {confirm: "Are you sure?"} %>
+</div>

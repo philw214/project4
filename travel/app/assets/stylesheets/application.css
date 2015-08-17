@@ -35,6 +35,12 @@
   float: left;
   color: #68A0A6;
 }
+.show-heading {
+  text-align: center;
+}
+.show-content {
+  margin-top: 5%;
+}
 #post_content{
   background-image: url('/images/content_bckgrnd.jpg');
   background-size: cover;

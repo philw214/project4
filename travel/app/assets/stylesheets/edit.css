@@ -1,0 +1,17 @@
+#post_content {
+  background-image: url("");
+  border: 1px solid;
+  font-family: sans-serif;
+  display: inline;
+  margin-top: 15%;
+}
+#post_location {
+  background-image: url("");
+  border: 1px solid;
+  font-family: sans-serif;
+}
+.content-label {
+  margin-top: 10%;
+  text-align: left;
+  /*position: absolute;*/
+}
