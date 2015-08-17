@@ -1,16 +1,14 @@
 <body class="main-page">
 
   <div id='map'></div>
-  <!-- <h1>All Posts </h1> -->
   <div class='allposts'>
     </br>
-    <%@posts.each do |post|%>
+    <% @posts.each do |post|%>
       <%= link_to(post.location.gsub(/[A-Za-z']+/,&:capitalize), post_path(post), :class => 'location')%>
       <p class="content"><%= post.content.truncate_words(4) %></p>
       <p class="creation"><%=  'Created ' + time_ago_in_words(post.created_at) + ' ago' %></p>
     <%end%>
   </div>
-
   <%=link_to 'New Post', new_post_path, :class => 'new_post', remote: true%>
 
   <div class='write'>
@@ -22,6 +20,7 @@
   <script>
     data = <%=raw (@posts.to_json)%>
   </script>
+  <div class="pagination"><%= will_paginate @posts%></div>
 
 </body>
 

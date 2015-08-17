@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   def index
     if current_user
-      @posts = current_user.posts.order('created_at DESC')
+      @posts = current_user.posts.paginate(:page => params[:page], :per_page => 4).order('created_at DESC')
       respond_to do |format|
         format.html
         format.json

@@ -25,6 +25,12 @@
   color: #332318;
   font-weight: 600;
 }
+.pagination{
+  position: absolute;
+  width: 35%;
+  bottom: 10%;
+  left: 15%;
+}
 .home{
   float: left;
   color: #68A0A6;
@@ -97,7 +103,6 @@ a{
   height: 78%;
   overflow: scroll;
   border-radius: 4px;
-  /*border: 1px solid;*/
 }
 .allposts h1{
   font-family: 'Homemade Apple', cursive;
