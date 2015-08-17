@@ -1,13 +1,13 @@
-<body>
+<body class="main-page">
 
   <div id='map'></div>
+  <!-- <h1>All Posts </h1> -->
   <div class='allposts'>
-    <h1>All Posts </h1>
     </br>
     <%@posts.each do |post|%>
       <%= link_to(post.location.gsub(/[A-Za-z']+/,&:capitalize), post_path(post), :class => 'location')%>
-      <p class='content'><%= post.content.truncate_words(4) %></p>
-      <p><%=  'Created ' + time_ago_in_words(post.created_at) + ' ago' %></p>
+      <p class="content"><%= post.content.truncate_words(4) %></p>
+      <p class="creation"><%=  'Created ' + time_ago_in_words(post.created_at) + ' ago' %></p>
     <%end%>
   </div>
 
