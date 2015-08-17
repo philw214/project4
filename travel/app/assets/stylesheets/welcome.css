@@ -36,18 +36,19 @@ a{
   margin: auto;
   width: 28%;
   text-align: center;
-  /*border: 2px solid;*/
   border-width: 20%;
   padding:1%;
 }
 .user{
   margin-top: 10%;
 }
-.login{
+
+
+.login {
   margin: 0 auto;
   width: 20%;
   text-align: center;
-}
+ }
 
 @media all and (max-width: 360px) {
 
@@ -55,5 +56,8 @@ a{
     font-size: 50px;
     margin-left: 15%;
   }
-
+  .login {
+   margin-left: 0;
+  }
+ 
 }

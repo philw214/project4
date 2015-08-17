@@ -4,17 +4,17 @@
   </div>
 
   <h2 class='tagline'>.begin. .yours.</h2>
+  <h3>Log in</h3>
   <div class='user'>
     <div class='login'>
-      <h3>Log in</h3>
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true %>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true %>
 
-        <div class="field">
+
           <%= f.label :password %><br />
           <%= f.password_field :password, autocomplete: "off" %>
-        </div>
+
 
         <% if devise_mapping.rememberable? -%>
           <div class="field">
@@ -24,7 +24,7 @@
         <% end -%>
 
         <div class="actions">
-          <%= f.submit "Log in" %>
+          <%= f.submit "Log in", :class=>'login-button' %>
         </div>
       <% end %>
     </div>
