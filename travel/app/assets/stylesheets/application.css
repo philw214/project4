@@ -30,6 +30,8 @@
   width: 35%;
   bottom: 10%;
   left: 15%;
+  color: black;
+  text-decoration: none;
 }
 .home{
   float: left;
